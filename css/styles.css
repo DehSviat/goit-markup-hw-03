@@ -65,14 +65,17 @@ button{
     border-bottom: 1px solid#ECECEC;
 }
 
+.logo-black{
+    font-family: 'Raleway';
+}
+
 .logo {
     color:#212121 ;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
-    line-height: calc(31/26);
+    line-height: calc(31 / 26);
    
-   ;
     
 }
 .icon {
@@ -80,7 +83,7 @@ button{
      font-family: 'Raleway' ,sans-serif;
      font-weight: 700;
      font-size: 26px;
-     line-height: calc(31/26);
+     line-height: calc(31 / 26);
      
     }
     .header-wrapper{
@@ -105,7 +108,7 @@ button{
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: calc(16/14);
+    line-height: calc(16 / 14);
 
 }
 
@@ -115,9 +118,14 @@ button{
     color:var(--title-text-color);
     font-weight: 500;
     font-size: 14px;
-    line-height: calc(16/14);
+    line-height: calc(16 / 14);
     letter-spacing: 0.02em;
+    
 }
+.link::before{
+    content: '';
+}
+
 .link.current{
     color: var(--accent-color);
 }
@@ -140,7 +148,7 @@ color: var(--accent-color);
     padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
-    line-height:calc(16/14);
+    line-height:calc(16 / 14);
     letter-spacing: 0.02em;
 
     
@@ -189,25 +197,27 @@ margin-right: 50px;
 /* -----------ГЕРОЙ--------------- */
 
 .hero{
-    /* background-image: url();
+    background-image:linear-gradient(
+     rgba(47, 48, 58, 0.4),
+     rgba(47, 48, 58, 0.4)
+     ),
+    url(./css/images/hero\ bg.jpg);
     background-repeat: no-repeat;
-    background-position:center;
-    background-size: cover;  */
-    background-color: var(--title-text-color);
+    background-position: center;
+    background-size: cover;
     padding-top: 200px;
-    padding-bottom: 280px;
+    padding-bottom: 200px;
     
 }
-
 
 .hero-title{
     color:var(--primary-white-color);
 }
 .hero-title-index{
-    color: #FFFFFF;
+    color: var(--primary-white-color);
     font-weight: 900;
     font-size: 44px;
-    line-height: calc(60/44);
+    line-height: calc(60 / 44);
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -261,14 +271,14 @@ margin-right: 50px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 14px;
-    line-height: calc(16/14);
+    line-height: calc(16 / 14);
     text-transform: uppercase; 
     
 }
 .benefits-text{
     font-weight: 400;
     font-size: 14px;
-    line-height: calc(24/14);
+    line-height: calc(24 / 14);
     margin-top: 10px;
 }
 
@@ -282,7 +292,7 @@ margin-right: 50px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
-    line-height: calc(42/36);
+    line-height: calc(42 / 36);
     text-align: center;
     margin-bottom: 50px;
 }
@@ -304,7 +314,7 @@ margin-right: 50px;
     color:var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
-    line-height:calc(42/36);
+    line-height:calc(42 / 36);
     text-align: center;
     
     
@@ -330,17 +340,39 @@ margin-right: 50px;
     color:var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
-    line-height: calc(19/16);
+    line-height: calc(19 / 16);
     text-align: center;
 }
 .position{
     font-weight: 400;
     font-size: 16px;
-    line-height: calc(19/16);
+    line-height: calc(19 / 16);
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 16px;
 }
 
+.team-soc-list{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.team-soc-item{
+    width: 44px;
+    height: 44px;
+    background: green;
+ 
+}
+.team-soc-link{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color:red;
+    display: block;
+    padding: 10px;
+}
 
 /* ------------button ----------------*/
 .portfolio{
@@ -358,7 +390,7 @@ margin-right: 50px;
     background-color:#F5F4FA;  
     font-weight: 500;
     font-size: 16px;
-    line-height: calc(26/16);
+    line-height: calc(26 / 16);
     text-align: center;
     padding: 6px 22px;
     border-radius: 4px;
@@ -381,20 +413,20 @@ margin-right: 50px;
     display: flex;
     flex-wrap:wrap;
     margin-top: 50px;
+    gap: 30px;
     
     
 }
 .card-projects{
-    margin-left: 30px;
-    padding-bottom: 20px;
-    margin-top: 30px;
+    /* margin-left: 30px; */
+    /* padding-bottom: 20px; */
+    /* margin-top: 30px; */
     /* border: 1px solid #f30b0b; */
     
 }
 .card-item__info{
-    border:#EEEEEE ;
+    border:1px solid #EEEEEE ;
     border-top: none;
-
     padding: 20px 24px;
 
 }
@@ -403,16 +435,20 @@ margin-right: 50px;
      
 }
 .slogan{
-    margin-top: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
 }
 
-.card-projects:nth-child(-3n+7){
+/* .card-projects:nth-child(-3n+7){
     margin-left: 0;
     
-}
-.card-item:nth-child(-n+3){
+} */
+/* .card-item:nth-child(-n+3){
     margin-top: 0;
-}
+} */
 
 
 
@@ -421,7 +457,7 @@ margin-right: 50px;
     color:var(--primary-white-color) ;
     font-weight: 400;
     font-size: 14px;
-    line-height: calc(24/14);
+    line-height: calc(24 / 14);
 }
 .footer{
     background-color: var(--title-text-color);
@@ -433,7 +469,7 @@ margin-right: 50px;
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
     font-size: 14px;
-    line-height: calc(24/14);
+    line-height: calc(24 / 14);
 }
 .footer__list{
     margin-top: 20px;
@@ -446,7 +482,7 @@ margin-right: 50px;
     color:var(--accent-color);
     font-weight: 700;
     font-size: 26px;
-    line-height: calc(31/26);  
+    line-height: calc(31 / 26);  
        
 }
 .logo{
@@ -456,13 +492,13 @@ margin-right: 50px;
     color:var(--color-black);
     font-weight: 700;
     font-size: 26px;
-    line-height: calc(31/26);
+    line-height: calc(31 / 26);
 }
 
  .grey .link{
     font-weight: 400;
     font-size: 14px;
-    line-height: calc(24/14);
+    line-height: calc(24 / 14);
     color: rgba(255, 255, 255, 0.6);
     padding: 0;
 
@@ -487,13 +523,13 @@ margin-right: 50px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
-    line-height: calc(36/18);
+    line-height: calc(36 / 18);
     letter-spacing: 0.06em
 }
 .slogan{
     font-weight: 400;
     font-size: 16px;
-    line-height: calc(30/60);
+    line-height: calc(30 / 60);
 }
 
 .box{
